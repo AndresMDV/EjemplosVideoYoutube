@@ -45,3 +45,40 @@ let nums2: Array<number> = []
 
 let tupla: [number, string[]] = [1, animales]
 
+const chica = 's'
+const mediana = 'm'
+const grande = 'l'
+const extragrande = 'xl'
+
+enum Talla { Chica = 's', Mediana = 'm', Grande = 'l', ExtraGrande = 'xl'}
+
+const variabel1 = Talla.Grande
+console.log(variabel1)
+
+const enum Loadingstate { Idle, Loading, Success, Error}
+const estado = Loadingstate.Success
+
+type Direccion = {
+    numero: number
+    calle: string
+    pais: string
+}
+type Persona = {
+    readonly id: number,
+    nombre: string,
+    talla: Talla,
+    direccion: Direccion
+}
+
+const objeto: Persona= { 
+    id: 1,
+    nombre: 'Hola Mundo',
+    talla: Talla.Chica ,
+    direccion: {
+        numero: 1,
+        calle: 'Siempre Vacio',
+        pais: 'Chanchitolandia'
+    }
+}
+
+const arr: Persona[] = []
